@@ -1,0 +1,33 @@
+###PEP2:
+
+Back end: Microservicios
+Front: react.
+
+package-json es como el pom de springboot
+dependencias:
+bootstrap
+axios
+
+==========CLASE REACT
+React:
+	*React trabaja todo con componentes. (<componente>). Es como la idea de "todo puede ser una clase".
+
+	*Estos deben ser escritos en la carpeta src/components/
+	*Estos pueden ser componentes->clase o componentes->función.
+	*Si quiero que otros archivos usen el componente, debo agregar una línea al final:
+		export default NombreComponente
+
+	*Para la pep2 debo escoger usar clase o función y esta decisión va a ser justificada en la evaluación.
+
+	*index.js es el archivo principal que se lee en la app. En index llamo a App. App llamará a cada componente.
+	*En la implementación de los componentes debo especificar las rutas de qué componentes van a responder (dibujar la interfaz) para cada ruta.
+
+	*Axios me unirá el front y back. Deberá estar importada en services. (Ej: BookService.js del profe)
+	*Los componentes siempre retornan html (lo que se muestra en front)
+	*Parece que las clases como botones, tablas y weás así vienen de bootstrap
+	*() => función flecha en javascript aparecerá harto trabajando con react. Se parece a las funciones anónimas de scheme.
+	*componentDidMount() -> esto ocurre cuando el componente se está montando, que ocurre como a la mitad del proceso de dibujado. Cuando esto ocurre, realizar el llenado de datos pidiéndole las cosas a axios. Esto es importante porque, en caso de no estar, el componente no va a pintar nada.
+
+
+==========CLASE KUBERNETES
+Qué es esto? Gestor de contenedores
