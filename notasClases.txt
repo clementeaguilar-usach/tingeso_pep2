@@ -31,3 +31,26 @@ React:
 
 ==========CLASE KUBERNETES
 Qué es esto? Gestor de contenedores
+
+En kubernetes los pods son como los contenedores, y los pods se almacenan en nodos. Revisar en la documentación de kubernetes la arquitectura de kubernetes, donde se especifica qué hace cada cosa y cómo están conectadas.
+Como el archivo de dockerfile, el deployment de kubernetes es el script que lanza la aplicación y se le especifica qué hay en los pods, en qué puertos corre todo, etc. Este script configura y crea los pods.
+Los servicios son la forma de comunicar los pods con el mundo externo básicamente. Hace que los pods sean accesibles.
+Esto resume el mundo de kubernetes: Deployment, Service y Pods.
+
+Kubectl es la herramienta para interactuar con el cluster de Kuberneters. Entonces le puedo pedir comandos como kubectl get pods, o kubectl get deployments/services.
+
+En el yml de Deployment de mi aplicación puedo elegir parámetros como:
+kind: Deployment
+metadata: metadata del deployment
+spec: especificaciones técnicas del deployment
+selector: detallar a qué está asociado
+replicas: cuántos pods voy a crear con las specs de los containers. Esto es importante porque frente a caídas de contendores de la plataforma, al haber más réplicas, kubernetes al detectar una caída de pod, busca una réplica para mantener la ejecución.
+En el ejemplo del profe, el Deployment está creando 3 pods.
+
+En el ym de Servicio:
+Como el de Deployment, con su metadata, kind y especificaciones.
+Diferencia: en el selector:
+			app: va conectado al deployment
+type: LoadBalancer. Qué es esto, al tener múltiples pods por réplicas, el serviio actuará como un balanceador de cargas para los pods.
+
+Para correr los yml de deploy/service, usar el comando kubectl apply -f miyml.yml
