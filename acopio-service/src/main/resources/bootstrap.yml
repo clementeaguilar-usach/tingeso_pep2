@@ -1,0 +1,21 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8081/
+  application:
+    name: acopio-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081/
+  datasource:
+    url: jdbc:postgresql://localhost:5432/acopio
+    username: postgres
+    password: 112233
+  jpa:
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
