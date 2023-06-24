@@ -54,3 +54,9 @@ Diferencia: en el selector:
 type: LoadBalancer. Qué es esto, al tener múltiples pods por réplicas, el serviio actuará como un balanceador de cargas para los pods.
 
 Para correr los yml de deploy/service, usar el comando kubectl apply -f miyml.yml
+
+
+#######################
+
+Echar a correr en el siguiente orden:
+Config -> Eureka -> Mis Servicios (acopio y esas weas) -> Gateway

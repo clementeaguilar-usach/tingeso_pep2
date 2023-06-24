@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="" />
+    <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notasClases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notasClases.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -20,13 +35,23 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2Rd4EFcsavHprLmr8dtaR1Ex5nu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -35,6 +60,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "431d4e6d4d4b0d58a47ab7feaebb4b69",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -46,7 +72,7 @@
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\pago-service\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AcopioServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
     <configuration name="AcopioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="acopio-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.acopioservice.AcopioServiceApplication" />
@@ -96,13 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProveedoresServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="proveedor-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.demo.ProveedoresServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -113,6 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687566513635</updated>
       <workItem from="1687566514157" duration="1812000" />
+      <workItem from="1687568531464" duration="1038000" />
     </task>
     <servers />
   </component>
