@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class ProveedorEntity {
     @Id
     @NonNull
+    private Integer id;
     private String codigo;
     private String nombre;
     private String categoria;

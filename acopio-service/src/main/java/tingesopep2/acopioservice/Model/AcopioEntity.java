@@ -8,6 +8,7 @@ import lombok.NonNull;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Table(name = "acopio")
@@ -18,5 +19,8 @@ public class AcopioEntity {
     @Id
     @NonNull
     private Integer id;
-    
+    private Date fecha;
+    private String turno;
+    private String proveedor;
+    private Integer kls_leche;
 }

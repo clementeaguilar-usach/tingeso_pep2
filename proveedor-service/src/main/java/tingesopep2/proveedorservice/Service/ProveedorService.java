@@ -32,8 +32,8 @@ public class ProveedorService {
                 :"No se encuentra proveedor con ese código (retencionByCodigo)";
     }
 
-    public void saveRetencion(String codigo, String nombre, String categoria, String retencion){
-        ProveedorEntity nuevoProveedor = new ProveedorEntity(codigo, nombre, categoria, retencion);
+    public void saveProveedor(Integer id, String codigo, String nombre, String categoria, String retencion){
+        ProveedorEntity nuevoProveedor = new ProveedorEntity(id, codigo, nombre, categoria, retencion);
         proveedorRepository.save(nuevoProveedor);
     }
 
