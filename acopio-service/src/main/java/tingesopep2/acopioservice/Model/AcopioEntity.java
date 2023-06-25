@@ -1,4 +1,4 @@
-package tingesopep2.proveedorservice.Model;
+package tingesopep2.acopioservice.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,15 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "proveedor")
+@Table(name = "acopio")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class ProveedorEntity {
+public class AcopioEntity {
     @Id
     @NonNull
-    private String codigo;
-    private String nombre;
-    private String categoria;
-    private String retencion;
+    private Integer id;
+    
 }
