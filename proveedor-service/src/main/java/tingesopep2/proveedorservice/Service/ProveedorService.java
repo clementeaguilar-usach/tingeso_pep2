@@ -15,20 +15,20 @@ public class ProveedorService {
     ProveedorRepository proveedorRepository;
 
     public String nombreByCodigo(String codigo) {
-        return proveedorRepository.findByCodigo(codigo) != null?
-                proveedorRepository.findByCodigo(codigo).getNombre()
+        return proveedorRepository.proveedorByCodigo(codigo) != null?
+                proveedorRepository.proveedorByCodigo(codigo).getNombre()
                 :"No se encuentra proveedor con ese código (nombreByCodigo))";
     }
 
     public String categoriaByCodigo(String codigo) {
-        return proveedorRepository.findByCodigo(codigo) != null?
-                proveedorRepository.findByCodigo(codigo).getCategoria()
+        return proveedorRepository.proveedorByCodigo(codigo) != null?
+                proveedorRepository.proveedorByCodigo(codigo).getCategoria()
                 :"No se encuentra proveedor con ese código (categoriaByCodigo)";
     }
 
     public String retencionByCodigo(String codigo) {
-        return proveedorRepository.findByCodigo(codigo) != null?
-                proveedorRepository.findByCodigo(codigo).getRetencion()
+        return proveedorRepository.proveedorByCodigo(codigo) != null?
+                proveedorRepository.proveedorByCodigo(codigo).getRetencion()
                 :"No se encuentra proveedor con ese código (retencionByCodigo)";
     }
 
