@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/ProveedorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Service/ProveedorServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Controller/ProveedorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Controller/ProveedorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Controller/prueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Service/ProveedorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/ProveedorServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,9 @@
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\grasassolidos-service\src\main\resources" />
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\pago-service\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tingesopep2.proveedorservice" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
     <configuration name="AcopioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -116,7 +121,7 @@
     </configuration>
     <configuration name="ProveedorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="proveedor-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.proveedorservice.Service.ProveedorServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.proveedorservice.ProveedorServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,7 +137,7 @@
       <updated>1687566513635</updated>
       <workItem from="1687566514157" duration="1812000" />
       <workItem from="1687568531464" duration="1038000" />
-      <workItem from="1687659042898" duration="830000" />
+      <workItem from="1687659042898" duration="2371000" />
     </task>
     <servers />
   </component>
