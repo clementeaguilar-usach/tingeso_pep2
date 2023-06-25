@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notasClases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notasClases.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/ProveedorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/src/main/java/tingesopep2/proveedorservice/Service/ProveedorServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -46,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2/proveedor-service/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "431d4e6d4d4b0d58a47ab7feaebb4b69",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2/proveedor-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;431d4e6d4d4b0d58a47ab7feaebb4b69&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\proveedor-service\src\main\resources" />
@@ -117,7 +116,7 @@
     </configuration>
     <configuration name="ProveedorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="proveedor-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.proveedorservice.ProveedorServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.proveedorservice.Service.ProveedorServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,6 +132,7 @@
       <updated>1687566513635</updated>
       <workItem from="1687566514157" duration="1812000" />
       <workItem from="1687568531464" duration="1038000" />
+      <workItem from="1687659042898" duration="830000" />
     </task>
     <servers />
   </component>
