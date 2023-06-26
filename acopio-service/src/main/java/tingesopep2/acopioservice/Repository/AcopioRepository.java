@@ -12,7 +12,7 @@ import java.util.Date;
 @Repository
 public interface AcopioRepository extends JpaRepository<AcopioEntity, Integer> {
 
-    @Query("select a.fecha from AcopioEntity a where a.proveedor = :proveedor")
-    ArrayList<Date> fechasByProveedor(@Param("proveedor") String proveedor);
+    @Query("select a.fecha from AcopioEntity a where a.proveedorCodigo = :proveedorCodigo")
+    ArrayList<Date> fechasByProveedorCodigo(@Param("proveedor") String proveedorCodigo);
 
 }

@@ -1,0 +1,9 @@
+package tingesopep2.acopioservice.Controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/acopios")
+public class AcopioController {
+}
