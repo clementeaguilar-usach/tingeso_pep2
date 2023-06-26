@@ -39,7 +39,7 @@ public class AcopioController {
         return ResponseEntity.ok(acopioService.countAcopioByproveedorCodigoAndTurno(proveedorCodigo, turno));
     }
 
-    @PostMapping("/fileUpload/")
+    @PostMapping("/fileUpload")
     public String cargarAcopio(@RequestParam("file")MultipartFile file,
                                                      RedirectAttributes redirectAttributes) {
         acopioService.guardar(file);
