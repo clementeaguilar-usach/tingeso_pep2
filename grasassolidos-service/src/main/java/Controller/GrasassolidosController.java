@@ -1,13 +1,14 @@
 package Controller;
 
+import Model.GrasassolidosEntity;
 import Service.GrasassolidosService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/grasassolidos")
@@ -15,6 +16,12 @@ public class GrasassolidosController {
 
     @Autowired
     private GrasassolidosService grasassolidosService;
+
+    @GetMapping("/{proveedorCodigo}")
+    public ResponseEntity<ArrayList<GrasassolidosEntity>> gsByProveedorCodigo(@PathVariable("proveedorCodigo")
+                                                                              String proveedorCodigo) {
+        return ResponseEntity.ok(grasassolidosService.gsByProveedorCodigo(proveedorCodigo));
+    }
 
     @PostMapping("/fileUpload")
     public String cargarGrasasSolidos(@RequestParam("file")MultipartFile file,
