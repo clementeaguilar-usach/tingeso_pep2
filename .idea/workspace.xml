@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Model/AcopioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Model/AcopioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Controller/AcopioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Controller/AcopioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Repository/AcopioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Repository/AcopioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pago-service/src/main/java/tingesopep2/pagoservice/Controller/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pago-service/src/main/java/tingesopep2/pagoservice/Controller/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Service/AcopioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/java/tingesopep2/acopioservice/Service/AcopioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,7 @@
       <workItem from="1687566514157" duration="1812000" />
       <workItem from="1687568531464" duration="1038000" />
       <workItem from="1687659042898" duration="8649000" />
-      <workItem from="1687732425100" duration="6632000" />
+      <workItem from="1687732425100" duration="10919000" />
     </task>
     <servers />
   </component>
