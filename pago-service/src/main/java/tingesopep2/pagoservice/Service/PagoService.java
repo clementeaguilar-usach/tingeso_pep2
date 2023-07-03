@@ -59,4 +59,42 @@ public class PagoService {
     }
 
     //Pago
+    public Integer pagoByCategoriaAndKlsLeche(String categoria, Integer kls_leche) {
+        switch (categoria) {
+            case "A":
+                return 700 * kls_leche;
+            case "B":
+                return 550 * kls_leche;
+            case "C":
+                return 400 * kls_leche;
+            case "D":
+                return 250 * kls_leche;
+            default:
+                return 0;
+        }
+    }
+
+    public Integer pagoByP_GrasaAndKlsLeche(String p_grasa, Integer kls_leche) {
+        Integer int_p_grasa = Integer.parseInt(p_grasa);
+        if (0 <= int_p_grasa && int_p_grasa <= 20) return 30 * kls_leche;
+        if (21 <= int_p_grasa && int_p_grasa <= 45) return 80 * kls_leche;
+        if (46 <= int_p_grasa) return 120 * kls_leche;
+        return 0;
+    }
+
+    public Integer pagoByP_SolidototalAndKlsLeche(String p_solidototal, Integer kls_leche) {
+        Integer int_p_solidototal = Integer.parseInt(p_solidototal);
+        if (0 <= int_p_solidototal && int_p_solidototal <= 7) return -130 * kls_leche;
+        if (8 <= int_p_solidototal && int_p_solidototal <= 18) return -90 * kls_leche;
+        if (19 <= int_p_solidototal && int_p_solidototal >= 35) return 95 * kls_leche;
+        if (36 <= int_p_solidototal) return 150 * kls_leche;
+        return 0;
+    }
+    /*
+    public Integer dias
+
+    public Double bonificacionByFrecuenciaMT(ArrayList<Acopio> acopios) {
+
+    }
+     */
 }
