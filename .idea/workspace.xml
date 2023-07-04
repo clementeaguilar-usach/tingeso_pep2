@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pago-service/src/main/java/tingesopep2/pagoservice/Service/PagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pago-service/src/main/java/tingesopep2/pagoservice/Service/PagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acopio-service/acopio-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/acopio-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pago-service/pago-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pago-service/pago-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proveedor-service/proveedor-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/proveedor-service.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
       <recent name="tingesopep2.proveedorservice" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.PagoServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
     <configuration name="AcopioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="acopio-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.acopioservice.AcopioServiceApplication" />
@@ -140,6 +143,7 @@
       <workItem from="1688425354684" duration="20714000" />
       <workItem from="1688459624998" duration="1604000" />
       <workItem from="1688461882585" duration="4324000" />
+      <workItem from="1688471784318" duration="661000" />
     </task>
     <servers />
   </component>
