@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public interface GrasassolidosRepository extends JpaRepository<GrasassolidosEntity, Integer> {
 
     @Query("select gs from GrasassolidosEntity gs where gs.proveedorCodigo = :proveedorCodigo")
-    ArrayList<GrasassolidosEntity> gsByProveedorCodigo(@Param("proveedorCodigo") String proveedorCodigo);
+    GrasassolidosEntity gsByProveedorCodigo(@Param("proveedorCodigo") String proveedorCodigo);
 }
 
 

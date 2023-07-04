@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import tingesopep2.pagoservice.Entity.Acopio;
 import tingesopep2.pagoservice.Entity.Grasassolidos;
+import tingesopep2.pagoservice.Model.PagoEntity;
 import tingesopep2.pagoservice.Repository.PagoRepository;
 
 import java.util.ArrayList;
@@ -41,9 +42,9 @@ public class PagoService {
     }
 
     //Grasassolidos
-    public ArrayList<Grasassolidos> gsByProveedorCodigo(String proveedorCodigo) {
+    public Grasassolidos gsByProveedorCodigo(String proveedorCodigo) {
         return restTemplate.getForObject("http://grasassolidos-service/grasassolidos"
-        + proveedorCodigo, ArrayList.class);
+        + proveedorCodigo, Grasassolidos.class);
     }
     //Proveedor
     public String nombreProveedor(String codigo) {
@@ -74,27 +75,123 @@ public class PagoService {
         }
     }
 
-    public Integer pagoByP_GrasaAndKlsLeche(String p_grasa, Integer kls_leche) {
-        Integer int_p_grasa = Integer.parseInt(p_grasa);
-        if (0 <= int_p_grasa && int_p_grasa <= 20) return 30 * kls_leche;
-        if (21 <= int_p_grasa && int_p_grasa <= 45) return 80 * kls_leche;
-        if (46 <= int_p_grasa) return 120 * kls_leche;
+    public Integer pagoByPGrasaAndKlsLeche(Integer p_grasa, Integer kls_leche) {
+        if (0 <= p_grasa && p_grasa <= 20) return 30 * kls_leche;
+        if (21 <= p_grasa && p_grasa <= 45) return 80 * kls_leche;
+        if (46 <= p_grasa) return 120 * kls_leche;
         return 0;
     }
 
-    public Integer pagoByP_SolidototalAndKlsLeche(String p_solidototal, Integer kls_leche) {
-        Integer int_p_solidototal = Integer.parseInt(p_solidototal);
-        if (0 <= int_p_solidototal && int_p_solidototal <= 7) return -130 * kls_leche;
-        if (8 <= int_p_solidototal && int_p_solidototal <= 18) return -90 * kls_leche;
-        if (19 <= int_p_solidototal && int_p_solidototal >= 35) return 95 * kls_leche;
-        if (36 <= int_p_solidototal) return 150 * kls_leche;
+    public Integer pagoByPSolidototalAndKlsLeche(Integer p_solidototal, Integer kls_leche) {
+        if (0 <= p_solidototal && p_solidototal <= 7) return -130 * kls_leche;
+        if (8 <= p_solidototal && p_solidototal <= 18) return -90 * kls_leche;
+        if (19 <= p_solidototal && p_solidototal >= 35) return 95 * kls_leche;
+        if (36 <= p_solidototal) return 150 * kls_leche;
         return 0;
     }
-    /*
-    public Integer dias
 
-    public Double bonificacionByFrecuenciaMT(ArrayList<Acopio> acopios) {
-
+    public Integer dctoByVarKlsLeche(Integer var_klsLeche, Integer pagoLeche) {
+        if (0 <= var_klsLeche && var_klsLeche <= 8) return pagoLeche;
+        if (9 <= var_klsLeche && var_klsLeche <= 25) return (int)(pagoLeche * 0.93);
+        if (26 <= var_klsLeche && var_klsLeche <= 45) return (int)(pagoLeche * 0.85);
+        if (46 <= var_klsLeche) return (int)(pagoLeche * 0.7);
+        return 0;
     }
-     */
+
+    public Integer dctoByVarPGrasa(Integer var_pGrasa, Integer pagoLeche) {
+        if (0 <= var_pGrasa && var_pGrasa <= 15) return pagoLeche;
+        if (16 <= var_pGrasa && var_pGrasa <= 25) return (int)(pagoLeche * 0.88);
+        if (26 <= var_pGrasa && var_pGrasa <= 40) return (int)(pagoLeche * 0.80);
+        if (41 <= var_pGrasa) return (int)(pagoLeche * 0.7);
+        return 0;
+    }
+
+    public Integer dctoByVarPSolidototal(Integer var_pSolidototal, Integer pagoLeche) {
+        if (0 <= var_pSolidototal && var_pSolidototal <= 6) return pagoLeche;
+        if (7 <= var_pSolidototal && var_pSolidototal <= 12) return (int)(pagoLeche * 0.82);
+        if (13 <= var_pSolidototal && var_pSolidototal <= 35) return (int)(pagoLeche * 0.78);
+        if (36 <= var_pSolidototal) return (int)(pagoLeche * 0.55);
+        return 0;
+    }
+
+    public Integer bonificacionByFrecuenciaAcopio(String codigoProveedor, Integer pagoLeche) {
+        ArrayList<Acopio> acopios = acopioByProveedorCodigo(codigoProveedor);
+        Integer totalEnvios = acopios.size();
+        Integer enviosM = countAcopioByProveedorCodigoAndTurno(codigoProveedor, "M");
+        Integer enviosT = countAcopioByProveedorCodigoAndTurno(codigoProveedor, "T");
+        if (totalEnvios == enviosM) return (int)(pagoLeche * 0.12);
+        if (totalEnvios == enviosT) return (int)(pagoLeche * 0.08);
+        else return (int)(pagoLeche * 0.2);
+    }
+
+    public Integer retencion(Integer pago_total, String proveedorCodigo) {
+        if (retencionProveedor(proveedorCodigo).equals("Si") &&
+                pago_total >= 950000) return (int)(pago_total * 0.13);
+        else return 0;
+    }
+
+    public String quincenaActual(String proveedorCodigo) {
+        ArrayList<Date> fechas = fechasByProveedorCodigo(proveedorCodigo);
+        Date primera_fecha = fechas.get(0);
+        Integer dia = primera_fecha.getDate();
+        if (dia <= 15) return "Primera quincena";
+        else return "Segunda quincena";
+    }
+
+    public Integer kls_enviadosByProveedor(String proveedorCodigo) {
+        ArrayList<Integer> kilosList = kls_lecheByProveedor(proveedorCodigo);
+        Integer kls_enviados = 0;
+        for (Integer i = 0; i < kilosList.size(); i++) {
+            kls_enviados = kls_enviados + kilosList.get(i);
+        }
+        return kls_enviados;
+    }
+
+    public void variacionesByProveedorCodigo(String proveedorCodigo, PagoEntity nuevoPago) {
+        ArrayList<PagoEntity> pagos = pagoRepository.pagoByProveedorCodigo(proveedorCodigo);
+        if (pagos.size() == 0) {
+            nuevoPago.setVar_grasa(0);
+            nuevoPago.setVar_leche(0);
+            nuevoPago.setVar_solidostotal(0);
+        }
+        else {
+            Integer var_grasa = nuevoPago.getP_grasa() - pagos.get(0).getP_grasa();
+            Integer var_solidototal = nuevoPago.getP_solidostotal() - pagos.get(0).getP_solidostotal();
+            Integer var_leche = (nuevoPago.getKls_enviados() * 100) / pagos.get(0).getKls_enviados();
+            nuevoPago.setVar_grasa(var_grasa);
+            nuevoPago.setVar_solidostotal(var_solidototal);
+            nuevoPago.setVar_leche(var_leche);
+        }
+    }
+
+    public void setPagoFinal(String proveedorCodigo) {
+        PagoEntity pago = new PagoEntity();
+        pago.setQuincena(quincenaActual(proveedorCodigo));
+        pago.setProveedorCodigo(proveedorCodigo);
+        pago.setP_grasa(gsByProveedorCodigo(proveedorCodigo).getP_grasa());
+        pago.setP_solidostotal(gsByProveedorCodigo(proveedorCodigo).getP_solidototal());
+        pago.setKls_enviados(kls_enviadosByProveedor(proveedorCodigo));
+        ArrayList<Acopio> acopios = acopioByProveedorCodigo(proveedorCodigo);
+        Integer totalEnvios = acopios.size();
+        pago.setN_dias_frecuencia(totalEnvios);
+        variacionesByProveedorCodigo(proveedorCodigo, pago);
+        pago.setPago_leche(pagoByCategoriaAndKlsLeche(categoriaProveedor(proveedorCodigo), pago.getKls_enviados()));
+        pago.setPago_grasa(pagoByPGrasaAndKlsLeche(pago.getP_grasa(), pago.getKls_enviados()));
+        pago.setPago_solidostotales(pagoByPSolidototalAndKlsLeche(pago.getP_solidostotal(), pago.getKls_enviados()));
+        pago.setBonificacion_frecuencia(bonificacionByFrecuenciaAcopio(proveedorCodigo, pago.getPago_leche()));
+        pago.setDcto_var_leche(dctoByVarKlsLeche(pago.getKls_enviados(), pago.getPago_leche()));
+        pago.setDcto_var_grasa(dctoByVarPGrasa(pago.getVar_grasa(), pago.getPago_leche()));
+        pago.setDcto_var_solidostotales(dctoByVarPSolidototal(pago.getVar_solidostotal(), pago.getPago_leche()));
+        pago.setPago_acopio(pago.getPago_leche()
+                + pago.getPago_grasa() + pago.getPago_solidostotales() + pago.getBonificacion_frecuencia());
+        pago.setDescuentos(pago.getDcto_var_grasa()
+                + pago.getDcto_var_leche() + pago.getDcto_var_solidostotales());
+        pago.setPago_total(pago.getPago_acopio() - pago.getDescuentos());
+        pago.setRetencion(retencion(pago.getPago_total(), proveedorCodigo));
+        pago.setPago_final(pago.getPago_total() - pago.getRetencion());
+    }
+
+    public ArrayList<PagoEntity> getAllPagos(){
+        return (ArrayList<PagoEntity>) pagoRepository.findAll();
+    }
 }

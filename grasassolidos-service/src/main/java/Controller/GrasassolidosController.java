@@ -18,7 +18,7 @@ public class GrasassolidosController {
     private GrasassolidosService grasassolidosService;
 
     @GetMapping("/{proveedorCodigo}")
-    public ResponseEntity<ArrayList<GrasassolidosEntity>> gsByProveedorCodigo(@PathVariable("proveedorCodigo")
+    public ResponseEntity<GrasassolidosEntity> gsByProveedorCodigo(@PathVariable("proveedorCodigo")
                                                                               String proveedorCodigo) {
         return ResponseEntity.ok(grasassolidosService.gsByProveedorCodigo(proveedorCodigo));
     }

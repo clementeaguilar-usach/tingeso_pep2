@@ -27,7 +27,7 @@ public class GrasassolidosService {
     private GrasassolidosRepository grasassolidosRepository;
     private final Logger logg = LoggerFactory.getLogger(GrasassolidosService.class);
 
-    public ArrayList<GrasassolidosEntity> gsByProveedorCodigo(String proveedorCodigo) {
+    public GrasassolidosEntity gsByProveedorCodigo(String proveedorCodigo) {
         return grasassolidosRepository.gsByProveedorCodigo(proveedorCodigo);
     }
 

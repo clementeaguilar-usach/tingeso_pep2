@@ -19,7 +19,7 @@ public class PagoEntity {
     @Id
     @NonNull
     private Integer id;
-    private Date quincena;
+    private String quincena;
     private String proveedorCodigo;
     private Integer p_grasa;
     private Integer p_solidostotal;
