@@ -38,7 +38,7 @@ public class PagoService {
     }
 
     public Integer countAcopioByProveedorCodigoAndTurno(String proveedorCodigo, String turno) {
-        return restTemplate.getForObject("http://acopio-service/acopios/"
+        return restTemplate.getForObject("http://acopio-service/acopios/acopio/"
         + proveedorCodigo + "/" + turno, Integer.class);
     }
 
@@ -49,16 +49,16 @@ public class PagoService {
     }
     //Proveedor
     public String nombreProveedor(String codigo) {
-        return restTemplate.getForObject("http://proveedor-service/nombre/" + codigo, String.class);
+        return restTemplate.getForObject("http://proveedor-service/proveedores/nombre/" + codigo, String.class);
     }
 
     public String categoriaProveedor(String codigo) {
         //System.out.println(codigo);
-        return restTemplate.getForObject("http://proveedor-service/categoria/" + codigo, String.class);
+        return restTemplate.getForObject("http://proveedor-service/proveedores/categoria/" + codigo, String.class);
     }
 
     public String retencionProveedor(String codigo) {
-        return restTemplate.getForObject("http://proveedor-service/retencion/" + codigo, String.class);
+        return restTemplate.getForObject("http://proveedor-service/proveedores/retencion/" + codigo, String.class);
     }
 
     //Pago
@@ -93,26 +93,26 @@ public class PagoService {
     }
 
     public Integer dctoByVarKlsLeche(Integer var_klsLeche, Integer pagoLeche) {
-        if (0 <= var_klsLeche && var_klsLeche <= 8) return pagoLeche;
-        if (9 <= var_klsLeche && var_klsLeche <= 25) return (int)(pagoLeche * 0.93);
-        if (26 <= var_klsLeche && var_klsLeche <= 45) return (int)(pagoLeche * 0.85);
-        if (46 <= var_klsLeche) return (int)(pagoLeche * 0.7);
+        if (0 <= var_klsLeche && var_klsLeche <= 8) return 0;
+        if (9 <= var_klsLeche && var_klsLeche <= 25) return (int)(pagoLeche * 0.07);
+        if (26 <= var_klsLeche && var_klsLeche <= 45) return (int)(pagoLeche * 0.15);
+        if (46 <= var_klsLeche) return (int)(pagoLeche * 0.3);
         return 0;
     }
 
     public Integer dctoByVarPGrasa(Integer var_pGrasa, Integer pagoLeche) {
-        if (0 <= var_pGrasa && var_pGrasa <= 15) return pagoLeche;
-        if (16 <= var_pGrasa && var_pGrasa <= 25) return (int)(pagoLeche * 0.88);
-        if (26 <= var_pGrasa && var_pGrasa <= 40) return (int)(pagoLeche * 0.80);
-        if (41 <= var_pGrasa) return (int)(pagoLeche * 0.7);
+        if (0 <= var_pGrasa && var_pGrasa <= 15) return 0;
+        if (16 <= var_pGrasa && var_pGrasa <= 25) return (int)(pagoLeche * 0.12);
+        if (26 <= var_pGrasa && var_pGrasa <= 40) return (int)(pagoLeche * 0.2);
+        if (41 <= var_pGrasa) return (int)(pagoLeche * 0.3);
         return 0;
     }
 
     public Integer dctoByVarPSolidototal(Integer var_pSolidototal, Integer pagoLeche) {
-        if (0 <= var_pSolidototal && var_pSolidototal <= 6) return pagoLeche;
-        if (7 <= var_pSolidototal && var_pSolidototal <= 12) return (int)(pagoLeche * 0.82);
-        if (13 <= var_pSolidototal && var_pSolidototal <= 35) return (int)(pagoLeche * 0.78);
-        if (36 <= var_pSolidototal) return (int)(pagoLeche * 0.55);
+        if (0 <= var_pSolidototal && var_pSolidototal <= 6) return 0;
+        if (7 <= var_pSolidototal && var_pSolidototal <= 12) return (int)(pagoLeche * 0.18);
+        if (13 <= var_pSolidototal && var_pSolidototal <= 35) return (int)(pagoLeche * 0.22);
+        if (36 <= var_pSolidototal) return (int)(pagoLeche * 0.45);
         return 0;
     }
 
@@ -183,6 +183,8 @@ public class PagoService {
         pago.setPago_total(pago.getPago_acopio() - pago.getDescuentos());
         pago.setRetencion(retencion(pago.getPago_total(), proveedorCodigo));
         pago.setPago_final(pago.getPago_total() - pago.getRetencion());
+        System.out.println(pago);
+        pagoRepository.save(pago);
     }
 
     public ArrayList<PagoEntity> getAllPagos(){
