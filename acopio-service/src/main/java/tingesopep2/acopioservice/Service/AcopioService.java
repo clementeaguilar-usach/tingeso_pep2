@@ -32,50 +32,57 @@ public class AcopioService {
         return (ArrayList<AcopioEntity>) acopioRepository.findAll();
     }
 
+    @Generated
     public String guardar(MultipartFile file){
-        String filename = file.getOriginalFilename();
-        if(filename != null){
-            if(!file.isEmpty()){
-                try{
-                    byte [] bytes = file.getBytes();
-                    Path path  = Paths.get(file.getOriginalFilename());
+        String name = file.getOriginalFilename();
+        if(name != null){
+            if(!file.isEmpty()) {
+                try {
+                    byte[] bytes = file.getBytes();
+                    Path path = Paths.get(file.getOriginalFilename());
                     Files.write(path, bytes);
                     logg.info("Archivo guardado");
                 }
-                catch (IOException e){
+                catch(IOException e){
                     logg.error("ERROR", e);
                 }
             }
-            return "Archivo guardado con exito!";
+            return "Archivo guardado con exito";
         }
         else{
-            return "No se pudo guardar el archivo";
+            return "No se ha guardado el archivo";
         }
     }
 
     @Generated
-    public void leerCsv(String direccion){
-        String texto = "";
+    public AcopioEntity leerCsv(String archivo){
         BufferedReader bf = null;
+        AcopioEntity acopio = new AcopioEntity();
         acopioRepository.deleteAll();
         try{
-            bf = new BufferedReader(new FileReader(direccion));
+            bf = new BufferedReader(new FileReader(archivo));
             String temp = "";
             String bfRead;
             int count = 1;
             while((bfRead = bf.readLine()) != null){
-                if (count == 1){
+                if(count == 1){
                     count = 0;
-                }
-                else{
-                    guardarDataDB(bfRead.split(";")[0], bfRead.split(";")[1], bfRead.split(";")[2], bfRead.split(";")[3]);
+                }else{
+                    String a, b ,c, d;
+                    a = bfRead.split(";")[0];
+                    b = bfRead.split(";")[1];
+                    c =bfRead.split(";")[2];
+                    d = bfRead.split(";")[3];
+
+                    acopio = guardarDatos(a,b,c,d);
                     temp = temp + "\n" + bfRead;
                 }
             }
-            texto = temp;
-            System.out.println("Archivo leido exitosamente");
+            logg.info("Se ha cargado correctamente el archivo");
+            return acopio;
         }catch(Exception e){
-            System.err.println("No se encontro el archivo");
+            logg.error("No se ha cargado el archivo");
+            return acopio;
         }finally{
             if(bf != null){
                 try{
@@ -87,25 +94,21 @@ public class AcopioService {
         }
     }
 
-    public void guardarDataDB(String fecha, String turno, String proveedor, String kls_leche){
-        AcopioEntity newData = new AcopioEntity();
+    public AcopioEntity guardarDatos(String fecha, String turno, String proveedor, String kls_leche){
+        AcopioEntity data = new AcopioEntity();
+        data.setProveedorCodigo(proveedor);
         if(fecha != null){
             try {
-                Date date = new SimpleDateFormat("yyyy/MM/dd").parse(fecha);
-                newData.setFecha(date);
-            }
-            catch (ParseException pe){
-                throw new RuntimeException(pe);
+                Date date  = new SimpleDateFormat("yyyy/MM/dd").parse(fecha);
+                data.setFecha(date);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
             }
         }
-        newData.setTurno(turno);
-        newData.setProveedorCodigo(proveedor);
-        newData.setKls_leche(Integer.valueOf(kls_leche));
-        guardarData(newData);
-    }
-
-    public void guardarData(AcopioEntity data){
+        data.setKls_leche(Integer.valueOf(kls_leche));
+        data.setTurno(turno);
         acopioRepository.save(data);
+        return data;
     }
 
     public ArrayList<Integer> kls_lecheByProveedorCodigo(String proveedor) {

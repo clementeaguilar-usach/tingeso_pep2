@@ -37,6 +37,11 @@ public class ProveedorService {
         proveedorRepository.save(nuevoProveedor);
     }
 
+    public ProveedorEntity saveProveedor(ProveedorEntity proveedor){
+        ProveedorEntity proveedorNew = proveedorRepository.save(proveedor);
+        return proveedorNew;
+    }
+
     public ArrayList<ProveedorEntity> allProveedores() {
         return (ArrayList<ProveedorEntity>) proveedorRepository.findAll();
     }

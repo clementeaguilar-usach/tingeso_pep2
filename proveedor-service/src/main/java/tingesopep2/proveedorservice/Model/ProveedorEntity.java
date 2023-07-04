@@ -5,9 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "proveedor")
@@ -17,6 +15,7 @@ import javax.persistence.Table;
 public class ProveedorEntity {
     @Id
     @NonNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String codigo;
     private String nombre;

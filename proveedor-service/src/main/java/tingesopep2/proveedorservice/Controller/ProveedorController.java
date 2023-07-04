@@ -2,10 +2,8 @@ package tingesopep2.proveedorservice.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import tingesopep2.proveedorservice.Model.ProveedorEntity;
 import tingesopep2.proveedorservice.Service.ProveedorService;
 
 @RestController
@@ -28,5 +26,10 @@ public class ProveedorController {
     @GetMapping("/retencion/{codigo}")
     public ResponseEntity<String> retencionProveedor(@PathVariable("codigo") String codigo) {
         return ResponseEntity.ok(proveedorService.retencionByCodigo(codigo));
+    }
+
+    @PostMapping("/saveproveedor")
+    public ResponseEntity<ProveedorEntity> saveProveedor(@RequestBody ProveedorEntity newProveedor) {
+        return ResponseEntity.ok(proveedorService.saveProveedor(newProveedor));
     }
 }

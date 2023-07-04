@@ -5,9 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,6 +16,7 @@ import java.util.Date;
 public class AcopioEntity {
     @Id
     @NonNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Date fecha;
     private String turno;
