@@ -6,10 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acopio-service/acopio-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/acopio-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pago-service/pago-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pago-service/pago-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proveedor-service/proveedor-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proveedor-service/proveedor-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acopio-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/acopio-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/acopio-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/eureka-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/eureka-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/gateway-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/grasassolidos-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/grasassolidos-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/pago-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/pago-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/proveedor-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/proveedor-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;431d4e6d4d4b0d58a47ab7feaebb4b69&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "431d4e6d4d4b0d58a47ab7feaebb4b69",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\proveedor-service\src\main\resources" />
@@ -143,7 +157,7 @@
       <workItem from="1688425354684" duration="20714000" />
       <workItem from="1688459624998" duration="1604000" />
       <workItem from="1688461882585" duration="4324000" />
-      <workItem from="1688471784318" duration="661000" />
+      <workItem from="1688471784318" duration="6367000" />
     </task>
     <servers />
   </component>

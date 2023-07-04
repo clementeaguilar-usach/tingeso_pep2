@@ -14,8 +14,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
+management.endpoints.web.exposure.include: "*"
