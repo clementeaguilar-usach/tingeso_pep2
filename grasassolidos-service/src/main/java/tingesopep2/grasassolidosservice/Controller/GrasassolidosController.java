@@ -1,14 +1,12 @@
-package Controller;
+package tingesopep2.grasassolidosservice.Controller;
 
-import Model.GrasassolidosEntity;
-import Service.GrasassolidosService;
+import tingesopep2.grasassolidosservice.Model.GrasassolidosEntity;
+import tingesopep2.grasassolidosservice.Service.GrasassolidosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/grasassolidos")
@@ -29,5 +27,10 @@ public class GrasassolidosController {
         grasassolidosService.guardar(file);
         grasassolidosService.leerCsv("datos.csv");
         return "Se leyó Datos.csv correctamente";
+    }
+
+    @GetMapping("/hola")
+    public String hola() {
+        return "Hola";
     }
 }

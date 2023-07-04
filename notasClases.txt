@@ -60,3 +60,12 @@ Para correr los yml de deploy/service, usar el comando kubectl apply -f miyml.ym
 
 Echar a correr en el siguiente orden:
 Config -> Eureka -> Mis Servicios (acopio y esas weas) -> Gateway
+
+#######################
+
+ProveedorService
+	-Quizá agregar un request para mostrar todos los proveedores???
+AcopioService
+	-
+GrasassolidoService
+PagoService

@@ -1,4 +1,4 @@
-package Model;
+package tingesopep2.grasassolidosservice.Model;
 
 import com.fasterxml.jackson.databind.DatabindException;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,8 @@ import java.util.Date;
 public class GrasassolidosEntity {
     @Id
     @NonNull
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "grasassolidos_sequence", sequenceName = "grasassolidos_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "grasassolidos_sequence")
     private Integer id;
     private String proveedorCodigo;
     private Integer p_grasa;

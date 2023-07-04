@@ -123,7 +123,7 @@ public class AcopioService {
         return acopioRepository.acopioByProveedorCodigo(proveedor);
     }
 
-    public Integer countAcopioByproveedorCodigoAndTurno(String proveedor, String turno){
-        return acopioRepository.countAcopioByProveedorCodigoAndTurno(proveedor, turno);
+    public Integer countAcopioByproveedorCodigoAndTurno(String proveedorCodigo, String turno){
+        return acopioRepository.countAcopioByProveedorCodigoAndTurno(proveedorCodigo, turno);
     }
 }
