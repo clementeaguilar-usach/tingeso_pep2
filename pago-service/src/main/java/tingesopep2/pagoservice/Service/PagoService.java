@@ -8,6 +8,7 @@ import tingesopep2.pagoservice.Entity.Grasassolidos;
 import tingesopep2.pagoservice.Model.PagoEntity;
 import tingesopep2.pagoservice.Repository.PagoRepository;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -26,7 +27,7 @@ public class PagoService {
         + proveedorCodigo, ArrayList.class);
     }
 
-    public ArrayList<Date> fechasByProveedorCodigo(String proveedorCodigo) {
+    public ArrayList<String> fechasByProveedorCodigo(String proveedorCodigo) {
         return restTemplate.getForObject("http://acopio-service/acopios/fechas/"
         + proveedorCodigo, ArrayList.class);
     }
@@ -43,20 +44,21 @@ public class PagoService {
 
     //Grasassolidos
     public Grasassolidos gsByProveedorCodigo(String proveedorCodigo) {
-        return restTemplate.getForObject("http://grasassolidos-service/grasassolidos"
+        return restTemplate.getForObject("http://grasassolidos-service/grasassolidos/"
         + proveedorCodigo, Grasassolidos.class);
     }
     //Proveedor
     public String nombreProveedor(String codigo) {
-        return restTemplate.getForObject("http://proveedores/nombre/" + codigo, String.class);
+        return restTemplate.getForObject("http://proveedor-service/nombre/" + codigo, String.class);
     }
 
     public String categoriaProveedor(String codigo) {
-        return restTemplate.getForObject("http://proveedores/categoria/" + codigo, String.class);
+        //System.out.println(codigo);
+        return restTemplate.getForObject("http://proveedor-service/categoria/" + codigo, String.class);
     }
 
     public String retencionProveedor(String codigo) {
-        return restTemplate.getForObject("http://proveedores/retencion/" + codigo, String.class);
+        return restTemplate.getForObject("http://proveedor-service/retencion/" + codigo, String.class);
     }
 
     //Pago
@@ -130,14 +132,6 @@ public class PagoService {
         else return 0;
     }
 
-    public String quincenaActual(String proveedorCodigo) {
-        ArrayList<Date> fechas = fechasByProveedorCodigo(proveedorCodigo);
-        Date primera_fecha = fechas.get(0);
-        Integer dia = primera_fecha.getDate();
-        if (dia <= 15) return "Primera quincena";
-        else return "Segunda quincena";
-    }
-
     public Integer kls_enviadosByProveedor(String proveedorCodigo) {
         ArrayList<Integer> kilosList = kls_lecheByProveedor(proveedorCodigo);
         Integer kls_enviados = 0;
@@ -166,7 +160,7 @@ public class PagoService {
 
     public void setPagoFinal(String proveedorCodigo) {
         PagoEntity pago = new PagoEntity();
-        pago.setQuincena(quincenaActual(proveedorCodigo));
+        pago.setQuincena(new Date());
         pago.setProveedorCodigo(proveedorCodigo);
         pago.setP_grasa(gsByProveedorCodigo(proveedorCodigo).getP_grasa());
         pago.setP_solidostotal(gsByProveedorCodigo(proveedorCodigo).getP_solidototal());

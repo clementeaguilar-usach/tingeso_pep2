@@ -15,7 +15,7 @@ public class PagoController {
     PagoService pagoService;
 
     @PostMapping("/calcular/{proveedorCodigo}")
-    public String pagoFinal(@PathVariable String proveedorCodigo) {
+    public String pagoFinal(@PathVariable("proveedorCodigo") String proveedorCodigo) {
         pagoService.setPagoFinal(proveedorCodigo);
         return "Se calculó el pago para el proveedor " + pagoService.nombreProveedor(proveedorCodigo);
     }

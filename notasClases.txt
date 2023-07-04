@@ -69,3 +69,7 @@ AcopioService
 	-
 GrasassolidoService
 PagoService
+
+####### Comentarios
+
+No me estresé con el cálculo de la quincena anterior. Asumo que se calcularán pagos la quincena próxima

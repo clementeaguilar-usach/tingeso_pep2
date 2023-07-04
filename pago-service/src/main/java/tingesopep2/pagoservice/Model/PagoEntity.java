@@ -18,7 +18,7 @@ public class PagoEntity {
     @NonNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String quincena;
+    private Date quincena;
     private String proveedorCodigo;
     private Integer p_grasa;
     private Integer p_solidostotal;
