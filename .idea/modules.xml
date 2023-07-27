@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" filepath="$PROJECT_DIR$/grasassolidos-service/grasassolidos-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pago-service/pago-service.iml" filepath="$PROJECT_DIR$/pago-service/pago-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pregunta-service/pregunta-service.iml" filepath="$PROJECT_DIR$/pregunta-service/pregunta-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/proveedor-service/proveedor-service.iml" filepath="$PROJECT_DIR$/proveedor-service/proveedor-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tingeso_pep2.iml" filepath="$PROJECT_DIR$/.idea/tingeso_pep2.iml" />
     </modules>

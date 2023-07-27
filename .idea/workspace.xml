@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acopio-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/acopio-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/acopio-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/acopio-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/eureka-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/eureka-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/gateway-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/grasassolidos-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/grasassolidos-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/pago-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/pago-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/proveedor-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/proveedor-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/my-app/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/my-app/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/config-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/config-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notasClases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notasClases.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +59,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "last_opened_file_path": "C:/Users/cleme/Documents/USACH/2023/2023-1/Tingeso/PEP2/tingeso_pep2/config-data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,16 +72,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\config-data" />
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\proveedor-service\src\main\resources" />
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\acopio-service\src\main\resources" />
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\grasassolidos-service\src\main\resources" />
       <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2\pago-service\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cleme\Documents\USACH\2023\2023-1\Tingeso\PEP2\tingeso_pep2" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tingesopep2.proveedorservice" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
     <configuration name="AcopioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="acopio-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.acopioservice.AcopioServiceApplication" />
@@ -134,6 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PreguntaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pregunta-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.preguntaservice.PreguntaServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProveedorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="proveedor-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tingesopep2.proveedorservice.ProveedorServiceApplication" />
@@ -157,7 +158,9 @@
       <workItem from="1688425354684" duration="20714000" />
       <workItem from="1688459624998" duration="1604000" />
       <workItem from="1688461882585" duration="4324000" />
-      <workItem from="1688471784318" duration="6367000" />
+      <workItem from="1688471784318" duration="8097000" />
+      <workItem from="1690436599260" duration="131000" />
+      <workItem from="1690437765048" duration="770000" />
     </task>
     <servers />
   </component>

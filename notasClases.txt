@@ -73,3 +73,10 @@ PagoService
 ####### Comentarios
 
 No me estresé con el cálculo de la quincena anterior. Asumo que se calcularán pagos la quincena próxima
+
+Rutas importantes:
+
+http://localhost:9090 - Prometheus
+http://localhost:8080/actuator - Actuator
+http://localhost:8761/ - Eureka
+http://localhost:3000 - Grafana

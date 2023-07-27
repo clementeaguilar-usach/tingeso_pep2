@@ -11,6 +11,7 @@
         <module name="eureka-service" />
         <module name="grasassolidos-service" />
         <module name="config-service" />
+        <module name="pregunta-service" />
         <module name="gateway-service" />
         <module name="proveedor-service" />
         <module name="acopio-service" />
@@ -23,6 +24,7 @@
       <module name="gateway-service" target="1.8" />
       <module name="grasassolidos-service" target="17" />
       <module name="pago-service" target="17" />
+      <module name="pregunta-service" target="17" />
       <module name="proveedor-service" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -34,6 +36,7 @@
       <module name="gateway-service" options="-parameters" />
       <module name="grasassolidos-service" options="-parameters" />
       <module name="pago-service" options="-parameters" />
+      <module name="pregunta-service" options="-parameters" />
       <module name="proveedor-service" options="-parameters" />
     </option>
   </component>
