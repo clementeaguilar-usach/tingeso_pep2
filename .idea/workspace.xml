@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a44b9853-deb0-414b-917d-3c604a5b3a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-data/gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/gateway-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Controller/PreguntaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Controller/PreguntaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Repository/PreguntaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Repository/PreguntaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Service/PreguntaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregunta-service/src/main/java/tingesopep2/preguntaservice/Service/PreguntaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-data/pregunta-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-data/pregunta-service.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +155,7 @@
       <workItem from="1688461882585" duration="4324000" />
       <workItem from="1688471784318" duration="8097000" />
       <workItem from="1690436599260" duration="131000" />
-      <workItem from="1690437765048" duration="2151000" />
+      <workItem from="1690437765048" duration="2782000" />
     </task>
     <servers />
   </component>
