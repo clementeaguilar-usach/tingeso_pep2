@@ -23,6 +23,11 @@ public class PreguntaService {
         return "Se guardó la pregunta con éxito.";
     }
 
+    public PreguntaEntity savePregunta(PreguntaEntity pregunta){
+        PreguntaEntity preguntaNew = preguntaRepository.save(pregunta);
+        return preguntaNew;
+    }
+
     public ArrayList<PreguntaEntity> getAllPreguntas(){
         return (ArrayList<PreguntaEntity>) preguntaRepository.findAll();
     }

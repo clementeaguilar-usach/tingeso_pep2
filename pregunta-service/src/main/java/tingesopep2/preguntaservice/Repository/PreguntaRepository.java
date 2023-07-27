@@ -9,12 +9,12 @@ import tingesopep2.preguntaservice.Model.PreguntaEntity;
 import java.util.ArrayList;
 
 @Repository
-//Solicita traer 4 preguntas de cierta dificultad
+
 public interface PreguntaRepository extends JpaRepository<PreguntaEntity, String> {
-    @Query(value = "Select p.id, p.dificultad, p.codigo, p.respuesta, p.enunciado, " +
+    @Query(value = "Select p.id, p.dificultad, p.codigo, p.respuesta, p.enunciado " +
             "from pregunta as p " +
             "where p.dificultad = :dificultad " +
-            "order by random()" +
+            "order by random() " +
             "limit 4",
             nativeQuery = true)
     ArrayList<PreguntaEntity> get4randPreguntasByDificultad(@Param("dificultad")String dificultad);

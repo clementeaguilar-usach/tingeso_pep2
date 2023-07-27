@@ -15,6 +15,11 @@ public class PreguntaController {
     @Autowired
     PreguntaService preguntaService;
 
+    @PostMapping("/savePregunta")
+    public ResponseEntity<PreguntaEntity> savePregunta(@RequestBody PreguntaEntity newPregunta) {
+        return ResponseEntity.ok(preguntaService.savePregunta(newPregunta));
+    }
+
     @PostMapping("/newPregunta")
     private ResponseEntity cargarPregunta(@RequestParam("dificultad") String dificultad,
                                           @RequestParam("codigo") String codigo,
